@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 
 class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -56,6 +56,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     @IBAction func OnSendClick(_ sender: Any) {
+        SVProgressHUD.show();
         self.OutsideTappedEditing();
         self.UISendButton.isEnabled=false;
         self.UIMessageText.isEnabled=false;
@@ -64,13 +65,14 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         self.message?.SendMessage(fbCustom: self.fbCustom!, name: self.crVM!.RoomName, completionHandler: {
             (resp, error) in
             if error == nil{
-                self.UISendButton.isEnabled=false;
-                self.UIMessageText.isEnabled=false;
+                self.UISendButton.isEnabled=true;
+                self.UIMessageText.isEnabled=true;
                 self.UIMessageText.text="";
                 self.crVM?.chatContent.append(self.message!);
                 self.message?.Empty();
                 self.message?.sender=self.fbCustom!.userInfo!.Email;
             }
+            SVProgressHUD.dismiss();
         })
     }
     
