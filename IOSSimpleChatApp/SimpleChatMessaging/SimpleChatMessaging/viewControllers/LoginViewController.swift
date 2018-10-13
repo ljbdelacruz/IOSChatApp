@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func OnLoginClick(_ sender: Any) {
         SVProgressHUD.show();
-        self.DisableInputs();
+        self.ToggleInput();
         self.fbCustom?.userInfo?.set(email: self.UIEmail.text!, pass: self.UIPassword.text!);
         self.fbCustom?.AuthUser(completionHandler: {
             (response, error) in
@@ -50,6 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.UIErrorLabel.text=error?.localizedDescription;
                 self.UIErrorLabel.alpha=1;
             }
+            self.ToggleInput();
         })
     }
     
@@ -71,11 +72,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
     }
     
-    func DisableInputs(){
-        self.UIPassword.isEnabled=false;
-        self.UIEmail.isEnabled=false;
-        self.UILoginBtn.isEnabled=false;
-        self.UISignUpBtn.isEnabled=false;
+    func ToggleInput(){
+        self.UIPassword.isEnabled = !self.UIPassword.isEnabled;
+        self.UIEmail.isEnabled = !self.UIEmail.isEnabled;
+        self.UILoginBtn.isEnabled = !self.UILoginBtn.isEnabled;
+        self.UISignUpBtn.isEnabled = !self.UISignUpBtn.isEnabled;
     }
     func CloseKeyboard(){
         self.UIEmail.endEditing(true);
