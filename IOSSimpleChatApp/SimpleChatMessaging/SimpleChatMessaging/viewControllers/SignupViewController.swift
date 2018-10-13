@@ -17,6 +17,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var UIPassword: UITextField!
     @IBOutlet weak var UIRPassword: UITextField!
     @IBOutlet weak var UIerrorLabel: UILabel!
+    @IBOutlet weak var UISignUpButton: UIButton!
     
     var fbCustomObj:FirebaseCustom?;
     
@@ -33,9 +34,11 @@ class SignupViewController: UIViewController {
     @IBAction func OnSignUpClick(_ sender: Any){
         SVProgressHUD.show();
         self.fbCustomObj?.userInfo?.set(email: self.UIEmail.text!, pass: self.UIPassword.text!);
+        self.UISignUpButton.isEnabled=false;
         if(self.fbCustomObj?.userInfo?.CheckData(repass: self.UIRPassword.text!))!{
             self.fbCustomObj?.createUser(completionHandler: {(result, error) in
                 SVProgressHUD.dismiss()
+                self.UISignUpButton.isEnabled=true;
                 if error==nil{
                     print(result!);
                     self.performSegue(withIdentifier: "signUpToDashboard", sender: sender);

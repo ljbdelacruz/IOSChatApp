@@ -184,6 +184,7 @@
                         <outlet property="UIName" destination="r7g-he-Hce" id="Emf-IJ-3h0"/>
                         <outlet property="UIPassword" destination="qFy-p9-pYR" id="SsQ-N3-NAb"/>
                         <outlet property="UIRPassword" destination="67i-pf-qsF" id="BbL-LV-wMi"/>
+                        <outlet property="UISignUpButton" destination="zui-DC-44y" id="5Kb-cW-x3V"/>
                         <outlet property="UIerrorLabel" destination="9NW-sc-fov" id="VlS-4P-bXY"/>
                         <segue destination="s2t-2J-w1x" kind="show" identifier="signUpToDashboard" id="CgT-Yh-n3p"/>
                     </connections>
@@ -335,6 +336,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ssp-m2-kCb"/>
+        <segue reference="CgT-Yh-n3p"/>
     </inferredMetricsTieBreakers>
 </document>
