@@ -37,12 +37,7 @@ class FirebaseCustom{
                 completionHandler(nil, error);
             }
         })
-    }
-    func CreateChildNode(name:String){
-        let messageDB=Database.database().reference().child("name");
-        
-    }
-    
+    }    
     func InsertData(data:Any?, db:DatabaseReference, completionHandler: @escaping (Any?, Error?) -> ()){
 //        let messageDB=Database.database().reference().child(name);
         db.childByAutoId().setValue(data!){
