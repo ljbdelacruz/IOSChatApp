@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase;
+import SVProgressHUD
 
 class SignupViewController: UIViewController {
 
@@ -30,9 +31,11 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func OnSignUpClick(_ sender: Any){
+        SVProgressHUD.show();
         self.fbCustomObj?.userInfo?.set(email: self.UIEmail.text!, pass: self.UIPassword.text!);
         if(self.fbCustomObj?.userInfo?.CheckData(repass: self.UIRPassword.text!))!{
             self.fbCustomObj?.createUser(completionHandler: {(result, error) in
+                SVProgressHUD.dismiss()
                 if error==nil{
                     print(result!);
                     self.performSegue(withIdentifier: "signUpToDashboard", sender: sender);
@@ -49,7 +52,7 @@ class SignupViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "signUpToDashboard"{
             let destVC=segue.destination as! DashboardViewController;
-            destVC.userLoginInfo=self.fbCustomObj?.userInfo;
+            destVC.fbCustom=self.fbCustomObj;
         }
     }
     

@@ -6,44 +6,66 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell1" rowHeight="144" id="Zht-uo-3a0" customClass="CustomCell1TableViewCell" customModule="SimpleChatMessaging" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell1" id="Zht-uo-3a0" customClass="CustomCell1TableViewCell" customModule="SimpleChatMessaging" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="486" height="144"/>
-            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zht-uo-3a0" id="2nY-RM-aps">
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zht-uo-3a0" id="2nY-RM-aps">
                 <rect key="frame" x="0.0" y="0.0" width="486" height="143.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p82-1h-nBu">
-                        <rect key="frame" x="-15" y="-18" width="126" height="178"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" preservesSuperviewLayoutMargins="YES" image="img1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="p82-1h-nBu" customClass="WHRoundedImageView" customModule="WHRoundedImageView">
+                        <rect key="frame" x="0.0" y="31" width="111" height="82"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="111" id="Gaa-hG-6LM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="radiusRatio">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-ll-LdI">
-                        <rect key="frame" x="114" y="7" width="366" height="128"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                    <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-ll-LdI">
+                        <rect key="frame" x="119" y="31" width="338" height="82"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ6-0w-QSV">
-                                <rect key="frame" x="10" y="0.0" width="245" height="21"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="13" y="0.0" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F61-UB-Now">
-                                <rect key="frame" x="10" y="29" width="356" height="46"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="13" y="15" width="356" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="82" id="iCk-zy-vE0"/>
+                        </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="p82-1h-nBu" secondAttribute="bottom" constant="30.5" id="1cE-hF-YB6"/>
+                    <constraint firstItem="p82-1h-nBu" firstAttribute="top" secondItem="2nY-RM-aps" secondAttribute="top" constant="31" id="6b5-5f-FHa"/>
+                    <constraint firstItem="zUR-ll-LdI" firstAttribute="leading" secondItem="p82-1h-nBu" secondAttribute="trailing" constant="8" id="EsR-im-7GN"/>
+                    <constraint firstItem="zUR-ll-LdI" firstAttribute="top" secondItem="2nY-RM-aps" secondAttribute="topMargin" constant="20" id="oRE-xk-TkS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zUR-ll-LdI" secondAttribute="bottom" constant="20" id="ySv-6d-K2l"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="UIDefaultMessage" destination="F61-UB-Now" id="uWe-Wv-wvk"/>
@@ -53,4 +75,7 @@
             <point key="canvasLocation" x="309" y="42"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="img1.jpg" width="480" height="480"/>
+    </resources>
 </document>

@@ -14,7 +14,7 @@ target 'SimpleChatMessaging' do
  pod 'Alamofire'
  pod 'SVProgressHUD'
  pod 'ChameleonFramework'
-
+ pod 'WHRoundedImageView'
 end
 
 post_install do |installer|
