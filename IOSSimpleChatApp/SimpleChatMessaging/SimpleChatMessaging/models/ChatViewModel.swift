@@ -45,7 +45,6 @@ class ChatViewModel{
         self.set(id: "", message: "", sender: "", ia: false);
     }
     static func Setup(dict:Dictionary<String, Any>, name:String)->ChatViewModel{
-//        var dict=response.value as! Dictionary<String, Any>;
         let stemp=ChatViewModel();
         stemp.set(id: name as! String, message: dict["message"] as! String, sender: dict["sender"] as! String, ia: false);
         return stemp;

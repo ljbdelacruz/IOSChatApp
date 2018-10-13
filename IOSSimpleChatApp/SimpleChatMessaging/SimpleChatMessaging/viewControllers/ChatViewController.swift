@@ -46,8 +46,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         self.crVM?.chatContent=[];
         self.crVM?.FetchConversation(fbCustom: self.fbCustom!, name: (self.crVM?.RoomName)!, completionHandler: {
             (response) in
-            print("INVOKED!");
-            print(self.crVM!.chatContent.count);
             self.configureTableView();
             //reload data in tables to update that there is a new content
             self.UIMessages.reloadData();
