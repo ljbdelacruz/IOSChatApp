@@ -72,7 +72,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             (isSuccess) in
             SVProgressHUD.dismiss()
             if isSuccess{
-                self.navigationController?.popViewController(animated: true);
+                self.navigationController?.popToRootViewController(animated: true)
             }
         })
     }
