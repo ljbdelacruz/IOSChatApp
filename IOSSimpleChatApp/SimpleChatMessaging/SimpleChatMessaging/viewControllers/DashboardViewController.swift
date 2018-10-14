@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -64,6 +65,16 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             destVC.crVM=self.selectedCR;
             destVC.fbCustom=self.fbCustom;
         }
+    }
+    @IBAction func OnLogoutClick(_ sender: Any) {
+        SVProgressHUD.show()
+        self.fbCustom?.Logout(completionHandler: {
+            (isSuccess) in
+            SVProgressHUD.dismiss()
+            if isSuccess{
+                self.navigationController?.popViewController(animated: true);
+            }
+        })
     }
     
     

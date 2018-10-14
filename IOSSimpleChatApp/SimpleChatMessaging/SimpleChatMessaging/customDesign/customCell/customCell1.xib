@@ -21,6 +21,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" preservesSuperviewLayoutMargins="YES" image="img1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="p82-1h-nBu" customClass="WHRoundedImageView" customModule="WHRoundedImageView">
                         <rect key="frame" x="0.0" y="31" width="111" height="82"/>
+                        <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="111" id="Gaa-hG-6LM"/>
                         </constraints>
@@ -36,7 +37,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-ll-LdI">
+                    <view opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-ll-LdI" customClass="BorderRadiusUIView" customModule="SimpleChatMessaging" customModuleProvider="target">
                         <rect key="frame" x="119" y="31" width="338" height="82"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ6-0w-QSV">
@@ -53,8 +54,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="338" id="Xbf-OD-RHs"/>
                             <constraint firstAttribute="height" constant="82" id="iCk-zy-vE0"/>
                         </constraints>
                     </view>
@@ -71,6 +73,7 @@
                 <outlet property="UIDefaultMessage" destination="F61-UB-Now" id="uWe-Wv-wvk"/>
                 <outlet property="UIProfileImage" destination="p82-1h-nBu" id="4a8-Vj-riS"/>
                 <outlet property="UITitle" destination="DQ6-0w-QSV" id="oWy-uE-rzK"/>
+                <outlet property="UIViewCover" destination="zUR-ll-LdI" id="RE8-PS-2J7"/>
             </connections>
             <point key="canvasLocation" x="309" y="42"/>
         </tableViewCell>

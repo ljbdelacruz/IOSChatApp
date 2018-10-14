@@ -37,7 +37,15 @@ class FirebaseCustom{
                 completionHandler(nil, error);
             }
         })
-    }    
+    }
+    func Logout(completionHandler: @escaping (Bool) -> ()){
+        do{
+            try Auth.auth().signOut()
+            completionHandler(true)
+        }catch{
+            completionHandler(false);
+        }
+    }
     func InsertData(data:Any?, db:DatabaseReference, completionHandler: @escaping (Any?, Error?) -> ()){
 //        let messageDB=Database.database().reference().child(name);
         db.childByAutoId().setValue(data!){

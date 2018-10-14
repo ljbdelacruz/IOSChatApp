@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SimpleChatMessaging/viewControllers/ChatViewController.swift"
-            timestampString = "561128317.7442141"
+            timestampString = "561168371.349618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "configureTableView()"
             landmarkType = "7">
          </BreakpointContent>

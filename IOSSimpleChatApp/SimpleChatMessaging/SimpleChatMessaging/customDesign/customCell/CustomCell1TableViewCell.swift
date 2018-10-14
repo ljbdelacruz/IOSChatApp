@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import WHRoundedImageView
 
 class CustomCell1TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var UIProfileImage: UIImageView!
+    @IBOutlet weak var UIViewCover: UIView!
+    @IBOutlet weak var UIProfileImage: WHRoundedImageView!
     @IBOutlet weak var UITitle: UILabel!
     @IBOutlet weak var UIDefaultMessage: UILabel!
     override func awakeFromNib() {
@@ -19,7 +21,6 @@ class CustomCell1TableViewCell: UITableViewCell {
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     

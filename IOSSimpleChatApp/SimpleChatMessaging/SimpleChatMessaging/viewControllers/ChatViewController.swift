@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import ChameleonFramework
 
 class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -34,6 +35,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         self.UIMessages.dataSource=self;
         self.UIMessages.register(UINib(nibName: "customCell1", bundle: nil), forCellReuseIdentifier: "customCell1");
         self.configureTableView();
+        self.UIMessages.separatorStyle = .none
+        
         
         //tap gestures
         //#sign for triggering selector
@@ -49,8 +52,13 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
             self.configureTableView();
             //reload data in tables to update that there is a new content
             self.UIMessages.reloadData();
+            self.scrollToBottom();
         })
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden=true;
+    }
+    
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -108,7 +116,25 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let cell=self.UIMessages.dequeueReusableCell(withIdentifier: "customCell1", for: indexPath) as! CustomCell1TableViewCell;
         cell.UITitle.text=self.crVM?.chatContent[indexPath.row].sender;
         cell.UIDefaultMessage.text=self.crVM?.chatContent[indexPath.row].message;
+        print("\(self.fbCustom!.userInfo!.Email) \(self.crVM!.chatContent[indexPath.row].sender)");
+        
+        if self.crVM!.chatContent[indexPath.row].sender != self.fbCustom!.userInfo!.Email {
+            cell.UIProfileImage.borderColor=UIColor.black
+            cell.UIViewCover.backgroundColor=UIColor.flatSand()
+            cell.UIProfileImage.alpha=1;
+        }else{
+            cell.UIProfileImage.borderColor=UIColor.flatBlue()
+            cell.UIViewCover.backgroundColor=UIColor.flatGreen();
+            cell.UIProfileImage.alpha=0;
+        }
         return cell;
+    }
+    
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: self.crVM!.chatContent.count-1, section: 0)
+            self.UIMessages.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
     }
     
     

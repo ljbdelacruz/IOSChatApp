@@ -25,10 +25,9 @@
 		6F5D5B6C2170A2E7004A50A8 /* customCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F5D5B6B2170A2E7004A50A8 /* customCell1.xib */; };
 		6F5D5B702170A3C2004A50A8 /* CustomCell1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D5B6F2170A3C1004A50A8 /* CustomCell1TableViewCell.swift */; };
 		6F5D5B742170FB4A004A50A8 /* testCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D5B722170FB4A004A50A8 /* testCD.xcdatamodeld */; };
-		6F5D5B7721717612004A50A8 /* CustomUIView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D5B7621717612004A50A8 /* CustomUIView1.swift */; };
-		6F5D5B792171761E004A50A8 /* CustomUIView1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F5D5B782171761E004A50A8 /* CustomUIView1.xib */; };
 		6F5D5B7B21719430004A50A8 /* ChatRoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D5B7A21719430004A50A8 /* ChatRoomList.swift */; };
 		6F5D5B7E21720EBA004A50A8 /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6F5D5B7D21720EBA004A50A8 /* img1.jpg */; };
+		6F5D5B852172B76A004A50A8 /* BorderRadiusUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5D5B842172B76A004A50A8 /* BorderRadiusUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,10 +52,9 @@
 		6F5D5B6B2170A2E7004A50A8 /* customCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customCell1.xib; sourceTree = "<group>"; };
 		6F5D5B6F2170A3C1004A50A8 /* CustomCell1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell1TableViewCell.swift; sourceTree = "<group>"; };
 		6F5D5B732170FB4A004A50A8 /* testCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = testCD.xcdatamodel; sourceTree = "<group>"; };
-		6F5D5B7621717612004A50A8 /* CustomUIView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView1.swift; sourceTree = "<group>"; };
-		6F5D5B782171761E004A50A8 /* CustomUIView1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomUIView1.xib; sourceTree = "<group>"; };
 		6F5D5B7A21719430004A50A8 /* ChatRoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomList.swift; sourceTree = "<group>"; };
 		6F5D5B7D21720EBA004A50A8 /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
+		6F5D5B842172B76A004A50A8 /* BorderRadiusUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadiusUIView.swift; sourceTree = "<group>"; };
 		E46EEB3272CBE936DD024CC1 /* Pods-SimpleChatMessaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatMessaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleChatMessaging/Pods-SimpleChatMessaging.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,8 +149,8 @@
 		6F5D5B692170A28C004A50A8 /* customDesign */ = {
 			isa = PBXGroup;
 			children = (
-				6F5D5B75217175EC004A50A8 /* customUIView */,
 				6F5D5B6A2170A2CC004A50A8 /* customCell */,
+				6F5D5B842172B76A004A50A8 /* BorderRadiusUIView.swift */,
 			);
 			path = customDesign;
 			sourceTree = "<group>";
@@ -172,15 +170,6 @@
 				6F5D5B722170FB4A004A50A8 /* testCD.xcdatamodeld */,
 			);
 			path = CD;
-			sourceTree = "<group>";
-		};
-		6F5D5B75217175EC004A50A8 /* customUIView */ = {
-			isa = PBXGroup;
-			children = (
-				6F5D5B7621717612004A50A8 /* CustomUIView1.swift */,
-				6F5D5B782171761E004A50A8 /* CustomUIView1.xib */,
-			);
-			path = customUIView;
 			sourceTree = "<group>";
 		};
 		6F5D5B7C21720E82004A50A8 /* Assets */ = {
@@ -261,7 +250,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F5D5B4D217044E4004A50A8 /* LaunchScreen.storyboard in Resources */,
-				6F5D5B792171761E004A50A8 /* CustomUIView1.xib in Resources */,
 				6F5D5B7E21720EBA004A50A8 /* img1.jpg in Resources */,
 				6F5D5B5C217049E4004A50A8 /* GoogleService-Info.plist in Resources */,
 				6F5D5B4A217044E4004A50A8 /* Assets.xcassets in Resources */,
@@ -340,9 +328,9 @@
 				6F5D5B6421709B8A004A50A8 /* ChatViewController.swift in Sources */,
 				6F5D5B48217044E3004A50A8 /* SimpleChatMessaging.xcdatamodeld in Sources */,
 				6F5D5B702170A3C2004A50A8 /* CustomCell1TableViewCell.swift in Sources */,
+				6F5D5B852172B76A004A50A8 /* BorderRadiusUIView.swift in Sources */,
 				6F5D5B5A21704714004A50A8 /* SignupViewController.swift in Sources */,
 				6F5D5B40217044E3004A50A8 /* AppDelegate.swift in Sources */,
-				6F5D5B7721717612004A50A8 /* CustomUIView1.swift in Sources */,
 				6F5D5B6021707971004A50A8 /* UserInfo.swift in Sources */,
 				6F5D5B6821709E1A004A50A8 /* ChatViewModel.swift in Sources */,
 				6F5D5B5E2170792C004A50A8 /* FirebaseCustom.swift in Sources */,
@@ -493,7 +481,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93CXP6R5M8;
 				INFOPLIST_FILE = SimpleChatMessaging/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljbdelacruz.SimpleChatMessaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -509,7 +500,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 93CXP6R5M8;
 				INFOPLIST_FILE = SimpleChatMessaging/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ljbdelacruz.SimpleChatMessaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
